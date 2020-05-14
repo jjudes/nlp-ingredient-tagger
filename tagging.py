@@ -1,8 +1,5 @@
-import numpy as np
-import pandas as pd
 import re
 import pycrfsuite as crf
-from parse import preprocess, tokenize, isquantity, isunit, standardize, asfloat
 from training import getfeatures
 
 def getlabels(ingredients, model='test.crfsuite'):
