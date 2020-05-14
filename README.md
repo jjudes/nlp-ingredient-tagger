@@ -16,7 +16,7 @@ While the content is roughly the same, variations in how the ingredient phrase c
 
 ### Using an NLP Solution ###
 
-A more eloquent and generalizable solution is collecting a dataset of labelled ingredients, quantities, units, etc. and using natural language processing to implicitly learn the structure and dependencies of ingredient phrases. The problem can be translated as a **sequence prediction** problem.
+A more eloquent and generalizable solution is collecting a dataset of labelled ingredients phrases with name, quantities, units, etc. and using natural language processing to implicitly learn the structure and dependencies of ingredient phrases. The problem can be translated as a **sequence prediction** problem.
 
 In normal classification we would have a word *W* (e.g. "peel") and some possible labels *C1, C2, ..., Ck* (e.g. Ingredient Name, Quantity, Unit, Comments), and our task is to predict which label best fits *W*. But the words *around* *W* might inform our guess for it's label (e.g. "Lemon peel for garnishing" [peel:Ingredient] vs. "Lemon, peel removed"[peel:Comment]). Hence what we're interested in is the whole sequence of words in a phrase.
 
