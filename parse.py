@@ -1,6 +1,5 @@
 import re
 from pandas import isna
-import unicodedata as uc
 
 # Some relevant stopwords in recipes for parsing
 stopwords = {'a', 'an', 'at', 'any', 'as', 'about', 
