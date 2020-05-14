@@ -8,7 +8,7 @@ def getlabels(ingredients, model='test.crfsuite'):
     tagger.open(model)
     
     if type(ingredients) is str: 
-        return tagger.tag(getfeatures(item))
+        return tagger.tag(getfeatures(ingredients))
     else:
         return [tagger.tag(getfeatures(item)) for item in ingredients]
         
