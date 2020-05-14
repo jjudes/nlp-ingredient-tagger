@@ -2,7 +2,7 @@ import re
 import pycrfsuite as crf
 from training import getfeatures
 
-def getlabels(ingredients, model='test.crfsuite'):
+def getlabels(ingredients, model_path):
     
     tagger = crf.Tagger()
     tagger.open(model)
