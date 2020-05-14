@@ -5,7 +5,7 @@ from training import getfeatures
 def getlabels(ingredients, model_path):
     
     tagger = crf.Tagger()
-    tagger.open(model)
+    tagger.open(model_path)
     
     if type(ingredients) is str: 
         return tagger.tag(getfeatures(ingredients))
