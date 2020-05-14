@@ -7,7 +7,10 @@ def getlabels(ingredients, model='test.crfsuite'):
     tagger = crf.Tagger()
     tagger.open(model)
     
-    return [tagger.tag(getfeatures(item)) for item in ingredients]
+    if type(ingredients) is str: 
+        return tagger.tag(getfeatures(item))
+    else:
+        return [tagger.tag(getfeatures(item)) for item in ingredients]
         
 def removeiob(labels):
     
